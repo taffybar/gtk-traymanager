@@ -86,6 +86,7 @@ trayManagerCheckRunning gdkScreen = do
     res <- c_egg_tray_manager_check_running realPtr
     return (res /= 0)
 
+mkTrayManager :: (ForeignPtr TrayManager -> TrayManager, FinalizerPtr a)
 mkTrayManager = (TrayManager, objectUnrefFromMainloop)
 
 unTrayManager :: TrayManager -> ForeignPtr TrayManager
