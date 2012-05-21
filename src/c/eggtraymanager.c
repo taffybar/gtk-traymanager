@@ -24,7 +24,6 @@
 #include <gtk/gtkwindow.h>
 #include "eggtraymanager.h"
 #include "eggmarshalers.h"
-#include "panel.h"
 #include "gdk-helper.h"
 
 /* Signals */
