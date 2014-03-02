@@ -63,9 +63,10 @@ import System.Glib.UTFString ( peekUTFString )
 
 import Control.Monad ( liftM )
 
-import Foreign
+import Foreign hiding ( unsafeForeignPtrToPtr )
 import Foreign.C.String ( CString, peekCString )
 import Foreign.C.Types
+import Foreign.ForeignPtr.Unsafe ( unsafeForeignPtrToPtr )
 import Unsafe.Coerce ( unsafeCoerce )
 
 newtype TrayManager = TrayManager (ForeignPtr TrayManager)
