@@ -57,7 +57,6 @@ import Graphics.UI.Gtk hiding ( after )
 import Graphics.UI.Gtk.Abstract.Object ( makeNewObject )
 import Graphics.UI.GtkInternals
 import System.Glib.GError ( failOnGError )
-import System.Glib.GObject
 import System.Glib.GType
 import System.Glib.UTFString ( peekUTFString )
 
