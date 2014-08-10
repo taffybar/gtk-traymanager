@@ -62,10 +62,10 @@ import System.Glib.UTFString ( peekUTFString )
 
 import Control.Monad ( liftM )
 
-import Foreign hiding ( unsafeForeignPtrToPtr )
+import Foreign
 import Foreign.C.String ( CString, peekCString )
 import Foreign.C.Types
-import Foreign.ForeignPtr.Unsafe ( unsafeForeignPtrToPtr )
+import Foreign.ForeignPtr.Unsafe as UF
 import Unsafe.Coerce ( unsafeCoerce )
 
 newtype TrayManager = TrayManager (ForeignPtr TrayManager)
@@ -181,7 +181,7 @@ castTo :: (GObjectClass obj, GObjectClass obj') => GType -> String -> (obj -> ob
 castTo gtype objTypeName obj =
   case toGObject obj of
     gobj@(GObject objFPtr)
-      | typeInstanceIsA ((unsafeForeignPtrToPtr.castForeignPtr) objFPtr) gtype
+      | typeInstanceIsA ((UF.unsafeForeignPtrToPtr.castForeignPtr) objFPtr) gtype
                   -> unsafeCastGObject gobj
       | otherwise -> error $ "Cannot cast object to " ++ objTypeName
 
