@@ -4,7 +4,7 @@ synopsis: A wrapper around the eggtraymanager library for Linux system trays
 license: LGPL-2.1
 license-file: LICENSE
 author: Tristan Ravitch
-maintainer: travitch@cs.wisc.edu
+maintainer: tristan@nochair.net
 category: Graphics
 build-type: Simple
 cabal-version: >=1.10
