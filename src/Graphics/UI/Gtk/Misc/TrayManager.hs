@@ -97,7 +97,6 @@ toTrayManager :: TrayManagerClass o => o -> TrayManager
 toTrayManager = unsafeCastGObject . toGObject
 
 instance TrayManagerClass TrayManager
---instance GObjectClass TrayManager
 instance GObjectClass TrayManager where
   toGObject = GObject . castForeignPtr . unTrayManager
   unsafeCastGObject = TrayManager . castForeignPtr . unGObject
