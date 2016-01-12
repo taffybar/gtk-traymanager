@@ -30,7 +30,6 @@ library
   c-sources: src/c/eggtraymanager.c, src/c/eggmarshalers.c, src/c/gdk-helper.c
   ghc-options: -Wall
   cc-options: -g
-  ghc-prof-options: -auto-all
 
 source-repository head
   type: git
