@@ -1,5 +1,5 @@
 name: gtk-traymanager
-version: 0.1.6
+version: 0.1.7
 synopsis: A wrapper around the eggtraymanager library for Linux system trays
 license: LGPL-2.1
 license-file: LICENSE
