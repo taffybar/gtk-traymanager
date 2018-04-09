@@ -1,5 +1,5 @@
 name: gtk-traymanager
-version: 1.0.0
+version: 1.0.1
 synopsis: A wrapper around the eggtraymanager library for Linux system trays
 license: LGPL-2.1
 license-file: LICENSE
@@ -29,7 +29,7 @@ library
   hs-source-dirs: src
   c-sources: src/c/eggtraymanager.c, src/c/eggmarshalers.c, src/c/gdk-helper.c
   ghc-options: -Wall
-  cc-options: -g
+  cc-options: -g -Wno-deprecated-declarations
 
 source-repository head
   type: git
